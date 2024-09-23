@@ -38,7 +38,7 @@ export default function AuthScreen({ navigation }) {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#00FFFF' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#AFE8BE' }}>
       <View style={styles.container}>
         <Text style={styles.title}>{isLogin ? 'Login' : 'Register'}</Text>
         <TextInput
@@ -89,5 +89,5 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: 'blue',
     textDecorationLine: 'underline',
-  },
+  },
 });

@@ -16,7 +16,7 @@ const App = () => {
 
                 <View style={styles.buyerContainer}>
                     <View>
-                        <Text style={styles.buyerTitle}>Get Freash Goods Directly From Famers</Text>
+                        <Text style={styles.buyerTitle}>Get Fresh Goods Directly From Famers</Text>
                         <TouchableOpacity style={styles.orderButton}>
                             <Text style={styles.orderButtonText}>Order Now</Text>
                         </TouchableOpacity>
@@ -73,10 +73,10 @@ const navItems = [
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F7F7F7',
+        backgroundColor: '#FFE498',
     },
     SellerContainer: {
-        backgroundColor: '#D1FAE5',
+        backgroundColor: '#E2FFF6',
         padding: 16,
         margin: 16,
         borderRadius: 8,
@@ -85,14 +85,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     SellerTitle: {
-        color: '#047857',
+        color: '#000000',
         fontWeight: 'bold',
         fontSize: 18,
     },
-    SellerSubtitle: {
-        color: '#047857',
-        fontSize: 16,
-    },
+    
     promoNote: {
         color: '#6B7280',
         fontSize: 12,
@@ -108,7 +105,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     buyerContainer: {
-        backgroundColor: 'white',
+        backgroundColor: '#E2FFF6',
         padding: 16,
         margin: 16,
         borderRadius: 8,
@@ -117,6 +114,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     buyerTitle: {
+        color: '#000000',
         fontSize: 18,
         fontWeight: 'bold',
     },
@@ -177,4 +175,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default App;
+export default App;
