@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     buyerContainer: {
-        backgroundColor: '#E2FFF6',
+        backgroundColor: '#000000',
         padding: 16,
         margin: 16,
         borderRadius: 8,
