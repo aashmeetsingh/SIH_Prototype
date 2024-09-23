@@ -54,13 +54,12 @@ const App = () => {
 
 const categories = [
     { title: 'Vegetables', image: 'https://placehold.co/100x100' },
-    { title: 'Dairy', image: 'https://placehold.co/100x100' },
     { title: 'Fruits', image: 'https://placehold.co/100x100' },
-    { title: 'Cotton, Jute', image: 'https://placehold.co/100x100' },
-    { title: 'Atta, Rice ', image: 'https://placehold.co/100x100' },
-    { title: 'Masala, Oil', image: 'https://placehold.co/100x100' },
-    { title: 'Grains', image: 'https://placehold.co/100x100' },
-    { title: 'Chicken', image: 'https://placehold.co/100x100' },
+    { title: 'Dairy', image: 'https://placehold.co/100x100' }, 
+    { title: 'Fabrics', image: 'https://placehold.co/100x100' },
+    { title: 'Atta, Rice & grains ', image: 'https://placehold.co/100x100' },
+    { title: 'Masala, Oil & Ghee', image: 'https://placehold.co/100x100' },
+    { title: 'Meat and Eggs', image: 'https://placehold.co/100x100' },
 ];
 
 const navItems = [
@@ -105,7 +104,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     buyerContainer: {
-        backgroundColor: '#000000',
+        backgroundColor: '#E2FFF6',
         padding: 16,
         margin: 16,
         borderRadius: 8,
