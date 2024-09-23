@@ -53,12 +53,12 @@ const App = () => {
 };
 
 const categories = [
-    { title: 'Vegetables', image: 'https://placehold.co/100x100' },
-    { title: 'Fruits', image: 'https://placehold.co/100x100' },
-    { title: 'Dairy', image: 'https://placehold.co/100x100' }, 
-    { title: 'Fabrics', image: 'https://placehold.co/100x100' },
-    { title: 'Atta, Rice & grains ', image: 'https://placehold.co/100x100' },
-    { title: 'Masala, Oil & Ghee', image: 'https://placehold.co/100x100' },
+    { title: 'Vegetables', image: 'https://static.vecteezy.com/system/resources/previews/022/984/730/non_2x/vegetable-transparent-free-png.png' },
+    { title: 'Fruits', image: 'https://png.pngtree.com/png-clipart/20230310/ourmid/pngtree-fresh-fruit-png-image_6642661.png' },
+    { title: 'Dairy', image: 'https://static.vecteezy.com/system/resources/thumbnails/024/549/128/small_2x/a-bottle-of-milk-and-glass-of-milk-on-a-basket-table-with-transparent-background-nutritious-and-healthy-dairy-products-png.png' }, 
+    { title: 'Fabrics', image: 'https://e7.pngegg.com/pngimages/924/663/png-clipart-plastic-raw-material-swarf-rice-straw-material-helix.png' },
+    { title: 'Atta, Rice & grains ', image: 'https://static.vecteezy.com/system/resources/previews/035/062/980/non_2x/ai-generated-wheat-grains-free-png.png' },
+    { title: 'Masala, Oil & Ghee', image: 'https://static.vecteezy.com/system/resources/thumbnails/039/228/791/small_2x/ai-generated-different-kinds-of-spices-on-wooden-circle-shape-on-transparent-background-ai-generated-png.png' },
     { title: 'Meat and Eggs', image: 'https://placehold.co/100x100' },
 ];
 
