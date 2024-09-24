@@ -1,17 +1,17 @@
-import { StyleSheet, Text, View,ScrollView, TouchableOpacity,Image,Button } from 'react-native';
+import { StyleSheet, Text, View,ScrollView, TouchableOpacity, Button,Image } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-export default function Home({ navigation }) {
+export default function SellerHome({ navigation }) {
     return (
         <View style={styles.container}>
             <ScrollView>
                 <View style={styles.SellerContainer}>
                     <View>
-                        <Text style={styles.SellerTitle}>Switch To Seller Mode</Text>
+                        <Text style={styles.SellerTitle}>Switch To Buyer Mode</Text>
                     </View>
                     <TouchableOpacity style={styles.SellerButton}>
-                        <Button title="Seller" onPress={() =>  navigation.navigate("Seller")} color="#10B981" />
+                        <Button title="Buyer" onPress={() =>  navigation.navigate("Home")} color="#10B981"/>
                     </TouchableOpacity>
                 </View>
 
@@ -53,17 +53,13 @@ export default function Home({ navigation }) {
     );
 };
 
-const SwitchtoSeller = () => {
-
-   
-  };
 
 const categories = [
     { title: 'Vegetables', image: 'https://static.vecteezy.com/system/resources/previews/022/984/730/non_2x/vegetable-transparent-free-png.png' },
     { title: 'Fruits', image: 'https://png.pngtree.com/png-clipart/20230310/ourmid/pngtree-fresh-fruit-png-image_6642661.png' },
     { title: 'Dairy', image: 'https://static.vecteezy.com/system/resources/thumbnails/024/549/128/small_2x/a-bottle-of-milk-and-glass-of-milk-on-a-basket-table-with-transparent-background-nutritious-and-healthy-dairy-products-png.png' }, 
     { title: 'Fabrics', image: 'https://e7.pngegg.com/pngimages/924/663/png-clipart-plastic-raw-material-swarf-rice-straw-material-helix.png' },
-    { title: 'Atta, Rice', image: 'https://w7.pngwing.com/pngs/950/670/png-transparent-rice-grain-in-sack-atta-flour-whole-wheat-flour-flour-food-company-whole-grain.png' },
+    { title: 'Atta, Rice', image: 'https://placehold.co/100x100' },
     { title: 'Grains', image: 'https://placehold.co/100x100'},
     { title: 'Masala', image: 'https://placehold.co/100x100' },
     {title: 'Oils and Ghee', image: 'https://placehold.co/100x100'},
@@ -96,7 +92,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 18,
     },
-    
+
     promoNote: {
         color: '#6B7280',
         fontSize: 12,
@@ -105,6 +101,7 @@ const styles = StyleSheet.create({
         paddingVertical: 8,
         paddingHorizontal: 16,
         borderRadius: 8,
+
     },
     SellerButtonText: {
         color: 'white',
@@ -180,3 +177,4 @@ const styles = StyleSheet.create({
         marginTop: 4,
     },
 });
+
