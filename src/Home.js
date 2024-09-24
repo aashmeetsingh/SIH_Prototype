@@ -63,7 +63,7 @@ const categories = [
     { title: 'Fruits', image: 'https://png.pngtree.com/png-clipart/20230310/ourmid/pngtree-fresh-fruit-png-image_6642661.png' },
     { title: 'Dairy', image: 'https://static.vecteezy.com/system/resources/thumbnails/024/549/128/small_2x/a-bottle-of-milk-and-glass-of-milk-on-a-basket-table-with-transparent-background-nutritious-and-healthy-dairy-products-png.png' }, 
     { title: 'Fabrics', image: 'https://e7.pngegg.com/pngimages/924/663/png-clipart-plastic-raw-material-swarf-rice-straw-material-helix.png' },
-    { title: 'Atta, Rice', image: 'https://w7.pngwing.com/pngs/950/670/png-transparent-rice-grain-in-sack-atta-flour-whole-wheat-flour-flour-food-company-whole-grain.png' },
+    { title: 'Atta, Rice', image: 'https://placehold.co/100x100' },
     { title: 'Grains', image: 'https://placehold.co/100x100'},
     { title: 'Masala', image: 'https://placehold.co/100x100' },
     {title: 'Oils and Ghee', image: 'https://placehold.co/100x100'},
