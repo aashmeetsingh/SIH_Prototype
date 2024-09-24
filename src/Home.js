@@ -162,8 +162,8 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         paddingVertical: 10,
         borderTopWidth: 1,
-        borderColor: '#E5E7EB',
-        backgroundColor: 'white',
+        borderColor: '#000000',
+        backgroundColor: '#c7c161',
     },
     navItem: {
         alignItems: 'center',
