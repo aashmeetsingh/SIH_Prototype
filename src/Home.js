@@ -12,8 +12,8 @@ import MasalaImage from './images/masala.png';
 import OilsGheeImage from './images/oils_ghee.png';
 import MeatEggsImage from './images/meat_eggs.png';
 
-export default function Home({ navigation }) {
-    return (
+export default function Home({ navigation })  {
+    return ( 
         <View style={styles.container}>
             <ScrollView>
                 <View style={styles.SellerContainer}>
@@ -31,13 +31,14 @@ export default function Home({ navigation }) {
                         <TouchableOpacity style={styles.orderButton}>
                             <Text style={styles.orderButtonText}>Order Now</Text>
                         </TouchableOpacity>
+                
                     </View>
                     <Image
                         source={{ uri: 'https://placehold.co/100x100' }}
                         style={styles.image}
                     />
                 </View>
-
+                            
                 <View style={styles.grid}>
                     {categories.map((category, index) => (
                         <View key={index} style={styles.gridItem}>
@@ -50,8 +51,8 @@ export default function Home({ navigation }) {
                     ))}
                 </View>
             </ScrollView>
-
-            <View style={styles.bottomNav}>
+            
+            <View style={styles.bottomNav}> 
                 {navItems.map((item, index) => (
                     <TouchableOpacity key={index} style={styles.navItem}>
                         <Icon name={item.icon} size={24} />
@@ -60,8 +61,8 @@ export default function Home({ navigation }) {
                 ))}
             </View>
         </View>
-    );
-};
+        );
+    };     
 
 const SwitchtoSeller = () => {
 
@@ -90,7 +91,7 @@ const navItems = [
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FAC7E4',
+        backgroundColor: '#F7C7D1',
     },
     SellerContainer: {
         backgroundColor: '#E2FFF6',
@@ -180,7 +181,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         borderTopWidth: 1,
         borderColor: '#000000',
-        backgroundColor: '#',
+        backgroundColor: '#C995A0',
     },
     navItem: {
         alignItems: 'center',

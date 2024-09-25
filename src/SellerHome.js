@@ -32,6 +32,7 @@ export default function SellerHome({ navigation }) {
                             <Text style={styles.orderButtonText}>Sell Now</Text>
                         </TouchableOpacity>
                     </View>
+                    
                     <Image
                         source={{ uri: 'https://placehold.co/100x100' }}
                         style={styles.image}
