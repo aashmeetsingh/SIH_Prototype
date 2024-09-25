@@ -1,6 +1,17 @@
-import { StyleSheet, Text, View,ScrollView, TouchableOpacity, Button,Image } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Button, Image } from 'react-native';
+import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
+
+// Import local images
+import VegetablesImage from './images/vegetables.png';
+import FruitsImage from './images/fruits.png';
+import DairyImage from './images/dairy.png';
+import FabricsImage from './images/fabrics.png';
+import AttaRiceImage from './images/atta_rice.png';
+import GrainsImage from './images/grains.png';
+import MasalaImage from './images/masala.png';
+import OilsGheeImage from './images/oils_ghee.png';
+import MeatEggsImage from './images/meat_eggs.png';
 
 export default function SellerHome({ navigation }) {
     return (
@@ -11,15 +22,15 @@ export default function SellerHome({ navigation }) {
                         <Text style={styles.SellerTitle}>Switch To Buyer Mode</Text>
                     </View>
                     <TouchableOpacity style={styles.SellerButton}>
-                        <Button title="Buyer" onPress={() =>  navigation.navigate("Home")} color="#10B981"/>
+                        <Button title="Buyer" onPress={() => navigation.navigate("Home")} color="#10B981" />
                     </TouchableOpacity>
                 </View>
 
                 <View style={styles.buyerContainer}>
                     <View>
-                        <Text style={styles.buyerTitle}> Sell Your Fresh Goods Directly to Buyers</Text>
+                        <Text style={styles.buyerTitle}>Sell Your Fresh Goods Directly to Buyers</Text>
                         <TouchableOpacity style={styles.orderButton}>
-                            <Text style={styles.orderButtonText}>Sell  Now</Text>
+                            <Text style={styles.orderButtonText}>Sell Now</Text>
                         </TouchableOpacity>
                     </View>
                     <Image
@@ -32,7 +43,7 @@ export default function SellerHome({ navigation }) {
                     {categories.map((category, index) => (
                         <View key={index} style={styles.gridItem}>
                             <Image
-                                source={{ uri: category.image }}
+                                source={category.image}
                                 style={styles.gridImage}
                             />
                             <Text style={styles.gridText}>{category.title}</Text>
@@ -51,19 +62,18 @@ export default function SellerHome({ navigation }) {
             </View>
         </View>
     );
-};
-
+}
 
 const categories = [
-    { title: 'Vegetables', image: 'https://static.vecteezy.com/system/resources/previews/022/984/730/non_2x/vegetable-transparent-free-png.png' },
-    { title: 'Fruits', image: 'https://png.pngtree.com/png-clipart/20230310/ourmid/pngtree-fresh-fruit-png-image_6642661.png' },
-    { title: 'Dairy', image: 'https://static.vecteezy.com/system/resources/thumbnails/024/549/128/small_2x/a-bottle-of-milk-and-glass-of-milk-on-a-basket-table-with-transparent-background-nutritious-and-healthy-dairy-products-png.png' }, 
-    { title: 'Fabrics', image: 'https://e7.pngegg.com/pngimages/924/663/png-clipart-plastic-raw-material-swarf-rice-straw-material-helix.png' },
-    { title: 'Atta, Rice', image: 'https://placehold.co/100x100' },
-    { title: 'Grains', image: 'https://placehold.co/100x100'},
-    { title: 'Masala', image: 'https://placehold.co/100x100' },
-    {title: 'Oils and Ghee', image: 'https://placehold.co/100x100'},
-    { title: 'Meat and Eggs', image: 'https://placehold.co/100x100' },
+    { title: 'Vegetables', image: VegetablesImage },
+    { title: 'Fruits', image: FruitsImage },
+    { title: 'Dairy', image: DairyImage },
+    { title: 'Fabrics', image: FabricsImage },
+    { title: 'Atta, Rice', image: AttaRiceImage },
+    { title: 'Grains', image: GrainsImage },
+    { title: 'Masala', image: MasalaImage },
+    { title: 'Oils and Ghee', image: OilsGheeImage },
+    { title: 'Meat and Eggs', image: MeatEggsImage },
 ];
 
 const navItems = [
@@ -101,7 +111,6 @@ const styles = StyleSheet.create({
         paddingVertical: 8,
         paddingHorizontal: 16,
         borderRadius: 8,
-
     },
     SellerButtonText: {
         color: 'white',
@@ -177,4 +186,3 @@ const styles = StyleSheet.create({
         marginTop: 4,
     },
 });
-
