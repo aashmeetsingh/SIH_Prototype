@@ -2,7 +2,6 @@ import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Button, Image } f
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-// Import local images
 import VegetablesImage from './images/vegetables.png';
 import FruitsImage from './images/fruits.png';
 import DairyImage from './images/dairy.png';
