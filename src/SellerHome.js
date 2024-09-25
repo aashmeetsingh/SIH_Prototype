@@ -17,9 +17,9 @@ export default function SellerHome({ navigation }) {
 
                 <View style={styles.buyerContainer}>
                     <View>
-                        <Text style={styles.buyerTitle}>Get Fresh Goods Directly From Famers</Text>
+                        <Text style={styles.buyerTitle}> Sell Your Fresh Goods Directly to Buyers</Text>
                         <TouchableOpacity style={styles.orderButton}>
-                            <Text style={styles.orderButtonText}>Order Now</Text>
+                            <Text style={styles.orderButtonText}>Sell  Now</Text>
                         </TouchableOpacity>
                     </View>
                     <Image
@@ -76,7 +76,7 @@ const navItems = [
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FAC7E4',
+        backgroundColor: '#FFE498',
     },
     SellerContainer: {
         backgroundColor: '#E2FFF6',
@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         borderTopWidth: 1,
         borderColor: '#000000',
-        backgroundColor: '#DB97BD',
+        backgroundColor: '#C7C161',
     },
     navItem: {
         alignItems: 'center',

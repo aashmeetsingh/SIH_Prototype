@@ -80,7 +80,7 @@ const navItems = [
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FFE498',
+        backgroundColor: '#FAC7E4',
     },
     SellerContainer: {
         backgroundColor: '#E2FFF6',
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         borderTopWidth: 1,
         borderColor: '#000000',
-        backgroundColor: '#c7c161',
+        backgroundColor: '#',
     },
     navItem: {
         alignItems: 'center',
