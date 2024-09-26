@@ -16,3 +16,4 @@ export default function SellNow({ navigation }) {
                         <Button title="Buyer" onPress={() => navigation.navigate("SellNow")} color="#10B981" />
                     </TouchableOpacity>
                 </View>
+                </ScrollView>
