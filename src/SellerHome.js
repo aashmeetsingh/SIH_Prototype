@@ -2,15 +2,7 @@ import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Button, Image } f
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-import VegetablesImage from './images/vegetables.png';
-import FruitsImage from './images/fruits.png';
-import DairyImage from './images/dairy.png';
-import FabricsImage from './images/fabrics.png';
-import AttaRiceImage from './images/atta_rice.png';
-import GrainsImage from './images/grains.png';
-import MasalaImage from './images/masala.png';
-import OilsGheeImage from './images/oils_ghee.png';
-import MeatEggsImage from './images/meat_eggs.png';
+
 
 export default function SellerHome({ navigation }) {
     return (
@@ -32,26 +24,35 @@ export default function SellerHome({ navigation }) {
                             <Text style={styles.orderButtonText}>Sell Now</Text>
                         </TouchableOpacity>
                     </View>
-                    
-                    <Image
+                    </View>
+
+                    <View>
+                      <View style={styles.earningsContainer}>
+                         <Text style={styles.text}>Earnings</Text>
+                </View>
+                </View>
+                      <View style={styles.trackingContainer}>
+                         <Text style={styles.text}>Tracking</Text>
+                </View>
+                     <View style={styles.historyContainer}>
+                         <Text style={styles.text}>History</Text>
+                </View>
+                 
+                <Image
                         source={{ uri: 'https://placehold.co/100x100' }}
                         style={styles.image}
                     />
-                </View>
-
-                <View style={styles.grid}>
+                <View style={styles.grid}>   
                     {categories.map((category, index) => (
                         <View key={index} style={styles.gridItem}>
                             <Image
                                 source={category.image}
-                                style={styles.gridImage}
-                            />
+                                style={styles.gridImage}/>
                             <Text style={styles.gridText}>{category.title}</Text>
                         </View>
                     ))}
                 </View>
             </ScrollView>
-
             <View style={styles.bottomNav}>
                 {navItems.map((item, index) => (
                     <TouchableOpacity key={index} style={styles.navItem}>
@@ -59,22 +60,14 @@ export default function SellerHome({ navigation }) {
                         <Text style={styles.navText}>{item.label}</Text>
                     </TouchableOpacity>
                 ))}
+                
             </View>
         </View>
     );
 }
 
-const categories = [
-    { title: 'Vegetables', image: VegetablesImage },
-    { title: 'Fruits', image: FruitsImage },
-    { title: 'Dairy', image: DairyImage },
-    { title: 'Fabrics', image: FabricsImage },
-    { title: 'Atta, Rice', image: AttaRiceImage },
-    { title: 'Grains', image: GrainsImage },
-    { title: 'Masala', image: MasalaImage },
-    { title: 'Oils and Ghee', image: OilsGheeImage },
-    { title: 'Meat and Eggs', image: MeatEggsImage },
-];
+const categories = []
+
 
 const navItems = [
     { label: 'Home', icon: 'home' },
@@ -91,6 +84,7 @@ const styles = StyleSheet.create({
     SellerContainer: {
         backgroundColor: '#E2FFF6',
         padding: 16,
+        height: '15%',
         margin: 16,
         borderRadius: 8,
         flexDirection: 'row',
@@ -111,17 +105,59 @@ const styles = StyleSheet.create({
         paddingVertical: 8,
         paddingHorizontal: 16,
         borderRadius: 8,
-    },
-    SellerButtonText: {
-        color: 'white',
-        fontWeight: 'bold',
-    },
-    buyerContainer: {
+    },  
+    earningsContainer: {
+        width: '92%',
+        length: '50%',
         backgroundColor: '#E2FFF6',
         padding: 16,
         margin: 16,
         borderRadius: 8,
-        flexDirection: 'row',
+        marginBottom: 20,
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
+      text: {
+        fontSize: 18,
+        fontWeight: 'bold', 
+        color: '#000000',
+      },
+    historyContainer: {
+        width: '92%',
+        length: '50%',
+        height:'20%',
+        backgroundColor: '#E2FFF6',
+        padding: 16, 
+        margin: 16,
+        borderRadius: 8, 
+        marginBottom: 20,
+        justifyContent: 'center',
+        alignItems: 'center',
+      },    
+      text: {
+        fontSize:20,
+        fontWeight: 'bold', 
+        color: '#000000',
+      },
+    trackingContainer: {
+        width: '92%',
+        length: '50%',
+        height: '20%',
+        backgroundColor:'#E2FFF6',
+        padding: 16,
+        margin: 16,
+        borderRadius: 8,
+        marginBottom: 20,
+        justifyContent: 'center',
+        alignItems:'center',
+      },
+    
+      buyerContainer: {
+        backgroundColor: '#E2FFF6',
+        padding: 16,
+        margin: 16,
+        borderRadius: 8,
+         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
     },
@@ -160,6 +196,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 16,
     },
+
     gridImage: {
         width: 100,
         height: 100,
