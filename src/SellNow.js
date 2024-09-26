@@ -8,11 +8,11 @@ export default function SellNow({ navigation }) {
     return (
         <View style={styles.container}>
             <ScrollView>
-                <View style={styles.SellerContainer}>
+                <View style={styles.SellContainer}>
                     <View>
-                        <Text style={styles.SellerTitle}>e</Text>
+                        <Text style={styles.SellTitle}>SellNow</Text>
                     </View>
-                    <TouchableOpacity style={styles.SellerButton}>
-                        <Button title="Buyer" onPress={() => navigation.navigate("Home")} color="#10B981" />
+                    <TouchableOpacity style={styles.SellButton}>
+                        <Button title="Buyer" onPress={() => navigation.navigate("SellNow")} color="#10B981" />
                     </TouchableOpacity>
                 </View>
