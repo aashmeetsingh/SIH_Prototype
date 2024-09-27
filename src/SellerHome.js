@@ -20,34 +20,34 @@ export default function SellerHome({ navigation }) {
                 <View style={styles.buyerContainer}>
                     <View>
                         <Text style={styles.buyerTitle}>Sell Your Fresh Goods Directly to Buyers</Text>
-                        <TouchableOpacity style={styles.orderButton}>
+                        <TouchableOpacity style={styles.orderButton} onPress={() => navigation.navigate("SellNow")}>
                             <Text style={styles.orderButtonText}>Sell Now</Text>
                         </TouchableOpacity>
                     </View>
-                    </View>
+                </View>
 
-                    <View>
-                      <View style={styles.earningsContainer}>
-                         <Text style={styles.text}>Earnings</Text>
+                <View>
+                    <View style={styles.earningsContainer}>
+                        <Text style={styles.earningtext}>Earnings</Text>
+                    </View>
                 </View>
+                <View style={styles.trackingContainer}>
+                    <Text style={styles.trackingtext}>Tracking</Text>
                 </View>
-                      <View style={styles.trackingContainer}>
-                         <Text style={styles.text}>Tracking</Text>
+                <View style={styles.historyContainer}>
+                    <Text style={styles.historytext}>History</Text>
                 </View>
-                     <View style={styles.historyContainer}>
-                         <Text style={styles.text}>History</Text>
-                </View>
-                 
+
                 <Image
-                        source={{ uri: 'https://placehold.co/100x100' }}
-                        style={styles.image}
-                    />
-                <View style={styles.grid}>   
+                    source={{ uri: 'https://placehold.co/100x100' }}
+                    style={styles.image}
+                />
+                <View style={styles.grid}>
                     {categories.map((category, index) => (
                         <View key={index} style={styles.gridItem}>
                             <Image
                                 source={category.image}
-                                style={styles.gridImage}/>
+                                style={styles.gridImage} />
                             <Text style={styles.gridText}>{category.title}</Text>
                         </View>
                     ))}
@@ -60,7 +60,7 @@ export default function SellerHome({ navigation }) {
                         <Text style={styles.navText}>{item.label}</Text>
                     </TouchableOpacity>
                 ))}
-                
+
             </View>
         </View>
     );
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
         paddingVertical: 8,
         paddingHorizontal: 16,
         borderRadius: 8,
-    },  
+    },
     earningsContainer: {
         width: '92%',
         length: '50%',
@@ -114,48 +114,64 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         marginBottom: 20,
         justifyContent: 'center',
-        alignItems: 'center',
-      },
-      text: {
+    },
+    earningtext: {
         fontSize: 18,
-        fontWeight: 'bold', 
+        fontWeight: 'bold',
         color: '#000000',
-      },
+        textAlign: 'left',
+        width: '100%',
+    },
+    text: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#000000',
+    },
     historyContainer: {
         width: '92%',
-        height:'20%',
+        height: '20%',
         backgroundColor: '#E2FFF6',
-        padding: 16, 
+        padding: 16,
         margin: 16,
-        borderRadius: 8, 
+        borderRadius: 8,
         marginBottom: 20,
         justifyContent: 'center',
-        alignItems: 'center',
-      },    
-      text: {
-        fontSize:20,
-        fontWeight: 'bold', 
+    },
+
+    historytext: {
+        fontSize: 18,
+        fontWeight: 'bold',
         color: '#000000',
-      },
+        textAlign: 'left',
+        width: '100%',
+
+    },
     trackingContainer: {
         width: '92%',
         length: '50%',
         height: '20%',
-        backgroundColor:'#E2FFF6',
+        backgroundColor: '#E2FFF6',
         padding: 16,
         margin: 16,
         borderRadius: 8,
         marginBottom: 20,
         justifyContent: 'center',
-        alignItems:'center',
-      },
-    
-      buyerContainer: {
+        alignItems: 'center',
+    },
+    trackingtext: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#000000',
+        textAlign: 'center',
+        width: '100%',
+    },
+
+    buyerContainer: {
         backgroundColor: '#E2FFF6',
         padding: 16,
         margin: 16,
         borderRadius: 8,
-         flexDirection: 'row',
+        flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
     },

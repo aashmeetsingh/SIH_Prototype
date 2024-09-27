@@ -8,12 +8,12 @@ export default function SellNow({ navigation }) {
     return (
         <View style={styles.container}>
             <ScrollView>
-                <View style={styles.SellContainer}>
+                <View style={styles.SellerContainer}>
                     <View>
-                        <Text style={styles.SellTitle}>SellNow</Text>
+                        <Text style={styles.SellerTitle}>SellNow</Text>
                     </View>
-                    <TouchableOpacity style={styles.SellButton}>
-                        <Button title="Buyer" onPress={() => navigation.navigate("SellNow")} color="#10B981" />
+                    <TouchableOpacity style={styles.SellerButton}>
+                        <Button title="Sell " onPress={() => navigation.navigate("SellNow")} color="#10B981" />
                     </TouchableOpacity>
                 </View>
 
@@ -37,8 +37,9 @@ export default function SellNow({ navigation }) {
                     source={{ uri: 'https://placehold.co/100x100' }}
                     style={styles.image}
                 />
+                </ScrollView>
                 </View>
-            </ScrollView>
+            
     );
 }
 const styles = StyleSheet.create({
