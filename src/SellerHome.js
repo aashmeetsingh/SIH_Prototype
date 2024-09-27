@@ -142,8 +142,9 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: 'bold',
         color: '#000000',
-        textAlign: 'left',
+        textAlign: 'center',
         width: '100%',
+        height: '100%'
 
     },
     trackingContainer: {
@@ -164,6 +165,7 @@ const styles = StyleSheet.create({
         color: '#000000',
         textAlign: 'center',
         width: '100%',
+        height:'100%'
     },
 
     buyerContainer: {
