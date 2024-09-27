@@ -7,7 +7,6 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 export default function SellerHome({ navigation }) {
     return (
         <View style={styles.container}>
-<<<<<<< Updated upstream
             <ScrollView>
                 <View style={styles.SellerContainer}>
                     <View>
@@ -62,61 +61,11 @@ export default function SellerHome({ navigation }) {
                     </TouchableOpacity>
                 ))}
 
-=======
-        <ScrollView>
-            <View style={styles.SellerContainer}>
-                <Text style={styles.SellerTitle}>Switch To Buyer Mode</Text>
-                <TouchableOpacity style={styles.SellerButton}>
-                    <Button title="Buyer" onPress={() => navigation.navigate("Home")} color="#10B981" />
-                </TouchableOpacity>
->>>>>>> Stashed changes
             </View>
-
-            <View style={styles.buyerContainer}>
-                <Text style={styles.buyerTitle}>Sell Your Fresh Goods Directly to Buyers</Text>
-                <TouchableOpacity style={styles.orderButton}>
-                    <Button title="Sell Now" onPress={() => navigation.navigate("SellNow")} color="#000000" /> 
-                </TouchableOpacity>
-            </View>
-        
-            <View style={styles.earningsContainer}>
-                <TouchableOpacity>
-                    <Text style={styles.earningtext}>Earnings</Text>
-                </TouchableOpacity>
-            </View>
-            <View style={styles.trackingContainer}>
-                <Text style={styles.text}>Tracking</Text>
-            </View>
-            <View style={styles.historyContainer}>
-                <Text style={styles.text}>History</Text>
-            </View>
-        
-            <Image
-                source={{ uri: 'https://placehold.co/100x100' }}
-                style={styles.image}
-            />
-            <View style={styles.grid}>
-                {categories.map((category, index) => (
-                    <View key={index} style={styles.gridItem}>
-                        <Image
-                            source={category.image}
-                            style={styles.gridImage} />
-                        <Text style={styles.gridText}>{category.title}</Text>
-                    </View>
-                ))}
-            </View>
-        </ScrollView>
-        <View style={styles.bottomNav}>
-            {navItems.map((item, index) => (
-                <TouchableOpacity key={index} style={styles.navItem}>
-                    <Icon name={item.icon} size={24} />
-                    <Text style={styles.navText}>{item.label}</Text>
-                </TouchableOpacity>
-            ))}
         </View>
-    </View>
-);
+    );
 }
+
 const categories = []
 
 
@@ -158,7 +107,7 @@ const styles = StyleSheet.create({
     },
     earningsContainer: {
         width: '92%',
-        height: '50%',
+        length: '50%',
         backgroundColor: '#E2FFF6',
         padding: 16,
         margin: 16,
@@ -170,13 +119,8 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: 'bold',
         color: '#000000',
-<<<<<<< Updated upstream
         textAlign: 'left',
         width: '100%',
-=======
-        textAlign: 'left',  
-        width: '100%',      
->>>>>>> Stashed changes
     },
     text: {
         fontSize: 18,
@@ -193,7 +137,6 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         justifyContent: 'center',
     },
-<<<<<<< Updated upstream
 
     historytext: {
         fontSize: 18,
@@ -204,17 +147,17 @@ const styles = StyleSheet.create({
         height: '100%'
 
     },
-=======
->>>>>>> Stashed changes
     trackingContainer: {
         width: '92%',
-        height: '50%',
+        length: '50%',
+        height: '20%',
         backgroundColor: '#E2FFF6',
         padding: 16,
         margin: 16,
         borderRadius: 8,
         marginBottom: 20,
         justifyContent: 'center',
+        alignItems: 'center',
     },
     trackingtext: {
         fontSize: 18,
