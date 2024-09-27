@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, Button } from 'react-native';
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, Button, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+
 
 export default function AuthScreen({ navigation }) {
   const [username, setUsername] = useState('');
@@ -26,6 +27,7 @@ export default function AuthScreen({ navigation }) {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: '#AFE8BE' }}>
+
       <View style={styles.container}>
         <Text style={styles.title}>Login</Text>
         <TextInput
@@ -75,4 +77,5 @@ const styles = StyleSheet.create({
     color: 'blue',
     textDecorationLine: 'underline',
   },
+
 });
