@@ -28,7 +28,7 @@ export default function Home({ navigation })  {
                 <View style={styles.buyerContainer}>
                     <View>
                         <Text style={styles.buyerTitle}>Get Fresh Goods Directly From Famers</Text>
-                        <TouchableOpacity style={styles.orderButton}>
+                        <TouchableOpacity style={styles.orderButton} onPress={() => navigation.navigate("BuyNow")}>
                             <Text style={styles.orderButtonText}>Order Now</Text>
                         </TouchableOpacity>
                 
