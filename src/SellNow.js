@@ -4,52 +4,102 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 
-export default function SellNow({ navigation }) {
+export default function SellerHome({ navigation }) {
     return (
         <View style={styles.container}>
             <ScrollView>
                 <View style={styles.SellerContainer}>
                     <View>
+<<<<<<< Updated upstream
                         <Text style={styles.SellerTitle}>SellNow</Text>
                     </View>
                     <TouchableOpacity style={styles.SellerButton}>
                         <Button title="Sell " onPress={() => navigation.navigate("SellNow")} color="#10B981" />
+=======
+                        <Text style={styles.SellerTitle}>Switch To Buyer Mode</Text>
+                    </View>
+                    <TouchableOpacity style={styles.SellerButton}>
+                        <Button title="Buyer" onPress={() => navigation.navigate("Home")} color="#10B981" />
+>>>>>>> Stashed changes
                     </TouchableOpacity>
                 </View>
 
-                <View style={styles.productContainer}>
+                <View style={styles.buyerContainer}>
                     <View>
-                        <Text style={styles.productTitle}>Type of Product</Text>
+                        <Text style={styles.buyerTitle}>Sell Your Fresh Goods Directly to Buyers</Text>
                         <TouchableOpacity style={styles.orderButton}>
-                            <Text style={styles.orderButtonText}> type </Text>
+                            <Button title="Sell Now" onPress={() => navigation.navigate("SellNow")} color="#000000" /> 
                         </TouchableOpacity>
                     </View>
                 </View>
+            
                 <View>
-                    <View style={styles.priceContainer}>
-                        <Text style={styles.text}>Price</Text>
+                <TouchableOpacity>
+                    <View style={styles.earningsContainer}>
+                        <Text style={styles.earningtext}>Earnings</Text>
                     </View>
+                    </TouchableOpacity>
                 </View>
-                <View style={styles.QuantityContainer}>
-                    <Text style={styles.text}>Quantity</Text>
+                <View style={styles.trackingContainer}>
+                    <Text style={styles.text}>Tracking</Text>
                 </View>
+                <View style={styles.historyContainer}>
+                    <Text style={styles.text}>History</Text>
+                </View>
+            
                 <Image
                     source={{ uri: 'https://placehold.co/100x100' }}
                     style={styles.image}
                 />
+<<<<<<< Updated upstream
                 </ScrollView>
                 </View>
             
+=======
+                <View style={styles.grid}>
+                    {categories.map((category, index) => (
+                        <View key={index} style={styles.gridItem}>
+                            <Image
+                                source={category.image}
+                                style={styles.gridImage} />
+                            <Text style={styles.gridText}>{category.title}</Text>
+                        </View>
+                    ))}
+                </View>
+            </ScrollView>
+            <View style={styles.bottomNav}>
+                {navItems.map((item, index) => (
+                    <TouchableOpacity key={index} style={styles.navItem}>
+                        <Icon name={item.icon} size={24} />
+                        <Text style={styles.navText}>{item.label}</Text>
+                    </TouchableOpacity>
+                ))}
+
+            </View>
+        </View>
+>>>>>>> Stashed changes
     );
 }
+
+const categories = []
+
+
+const navItems = [
+    { label: 'Home', icon: 'home' },
+    { label: 'Categories', icon: 'th-large' },
+    { label: 'Search', icon: 'search' },
+    { label: 'Account', icon: 'user' },
+];
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F7C7D1',
+        backgroundColor: '#FFE498',
     },
     SellerContainer: {
         backgroundColor: '#E2FFF6',
         padding: 16,
+        height: '15%',
         margin: 16,
         borderRadius: 8,
         flexDirection: 'row',
@@ -71,10 +121,46 @@ const styles = StyleSheet.create({
         paddingHorizontal: 16,
         borderRadius: 8,
     },
-    SellerButtonText: {
-        color: 'white',
-        fontWeight: 'bold',
+    earningsContainer: {
+        width: '92%',
+        height: '50%',
+        backgroundColor: '#E2FFF6',
+        padding: 16,
+        margin: 16,
+        borderRadius: 8,
+        marginBottom: 20,
+        justifyContent: 'center',
+        alignItems: 'center',
+        
     },
+    text: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#000000',
+    },
+    historyContainer: {
+        width: '92%',
+        height: '20%',
+        backgroundColor: '#E2FFF6',
+        padding: 16,
+        margin: 16,
+        borderRadius: 8,
+        marginBottom: 20,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    trackingContainer: {
+        width: '92%',
+        height: '20%',
+        backgroundColor: '#E2FFF6',
+        padding: 16,
+        margin: 16,
+        borderRadius: 8,
+        marginBottom: 20,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
     buyerContainer: {
         backgroundColor: '#E2FFF6',
         padding: 16,
@@ -119,6 +205,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 16,
     },
+
     gridImage: {
         width: 100,
         height: 100,
@@ -135,7 +222,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         borderTopWidth: 1,
         borderColor: '#000000',
-        backgroundColor: '#C995A0',
+        backgroundColor: '#C7C161',
     },
     navItem: {
         alignItems: 'center',
