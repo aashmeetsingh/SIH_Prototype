@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, Button, Image } from 'react-native';
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, Button } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function AuthScreen({ navigation }) {
@@ -20,28 +20,14 @@ export default function AuthScreen({ navigation }) {
     console.log('Login button pressed');
   };
 
-  const handleRegister = () => {
-
-    console.log('Register button pressed');
-  };
-
-  const toggleAuthMode = () => {
-    setIsLogin(!isLogin);
-  };
-
   const handleSubmit = () => {
-    if (isLogin) {
-      handleLogin();
-    } else {
-      handleRegister();
-    }
+    handleLogin();
   };
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: '#AFE8BE' }}>
       <View style={styles.container}>
-
-        <Text style={styles.title}>{isLogin ? 'Login' : 'Register'}</Text>
+        <Text style={styles.title}>Login</Text>
         <TextInput
           style={styles.input}
           placeholder="Username"
@@ -55,11 +41,9 @@ export default function AuthScreen({ navigation }) {
           onChangeText={handlePasswordChange}
           secureTextEntry={true}
         />
-        <Button title={isLogin ? 'Login' : 'Register'} onPress={handleSubmit} />
-        <TouchableOpacity onPress={toggleAuthMode}>
-          <Text style={styles.link}>
-            {isLogin ? 'Don\'t have an account? Register' : 'Already have an account? Login'}
-          </Text>
+        <Button title="Login" onPress={handleSubmit} />
+        <TouchableOpacity onPress={() => navigation.navigate("Register")}>
+          <Text style={styles.link}>Don't have an account? Register</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -86,9 +70,9 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   link: {
-    marginTop:40,
+    marginTop: 40,
     fontSize: 16,
     color: 'blue',
     textDecorationLine: 'underline',
-  },
+  },
 });

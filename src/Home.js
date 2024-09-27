@@ -64,10 +64,7 @@ export default function Home({ navigation })  {
         );
     };     
 
-const SwitchtoSeller = () => {
 
-   
-  };
 
 const categories = [
     { title: 'Vegetables', image: VegetablesImage },
