@@ -7,7 +7,7 @@ import SellerHome from './src/SellerHome';
 import SellNow from './src/SellNow';
 import BuyNow from './src/BuyNow';
 import Register from './src/Register';
-
+import UserMenu from './src/UserMenu';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +21,7 @@ function App() {
         <Stack.Screen name="SellNow" component={SellNow} />
         <Stack.Screen name="BuyNow" component={BuyNow} />
         <Stack.Screen name="Register" component={Register} />
+        <Stack.Screen name="User_M" component={UserMenu} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -49,6 +49,7 @@ export default function Home({ navigation })  {
                             <Text style={styles.gridText}>{category.title}</Text>
                         </View>
                     ))}
+                    
                 </View>
             </ScrollView>
             
